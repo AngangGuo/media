@@ -42,8 +42,33 @@ theme = "relearn"
 ```
 
 ### Create chapter page
-Chapters are pages that contain other child pages. 
+Chapters are pages that contain other child pages(content pages). You can think chapter as a container(folder).
 It has a special layout style and usually just contains a chapter name, the title and a brief abstract of the section.
 ```
 hugo new --kind chapter applications/_index.md
+```
+
+### Create content pages
+Create content pages inside the chapter. Here are two ways to create content in the chapter:
+
+```
+// 1. As single file; it's simple
+hugo new basics/first-content.md
+
+// 2. As a folder with _index.md; You can create sub-folder to hold all the assets used by this page
+hugo new basics/second-content/_index.md
+```
+
+### Test & Run
+```
+hugo serve
+```
+
+```
+CUSTOMIZE YOUR OWN HOME PAGE
+The site is working. Don't forget to customize this page with your own. You typically have 3 choices :
+
+1. Create an _index.md document in content folder and fill it with Markdown content
+2. Create an index.html file in the static folder and fill the file with HTML content
+3. Configure your server to automatically redirect home page to one your documentation page
 ```
